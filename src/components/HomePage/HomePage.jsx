@@ -1,20 +1,31 @@
 import React from 'react';
-import { DivBox, SigninLink } from './HomePage.styled';
+import {
+  Description,
+  DivBox,
+  GetStart,
+  LoginLink,
+  DeskContent,
+} from './HomePage.styled';
 
 const HomePage = () => {
   return (
     <DivBox>
-      <h1>Добро пожаловать в Phonebook</h1>
-      <p>
-        Ваш надежный и удобный инструмент для управления контактами. Здесь вы
-        можете легко хранить, редактировать и находить ваши контакты.
-      </p>
-      <p>
-        Мы создали этот сервис, чтобы облегчить вам жизнь и сделать управление
-        контактами проще. Начните добавлять свои контакты сегодня и
-        наслаждайтесь удобством, которое предоставляет Phonebook.
-      </p>
-      <SigninLink to="/signin">signin</SigninLink>
+      <h1>Wellcome in Phonebook</h1>
+      <DeskContent>
+        <Description>
+          It is the best phonebook service. It is secure. It is comfortable. It
+          is faster.
+        </Description>
+        <Description>
+          We created this service to make your life easier and simplify your
+          work with contacts. let's start adding your contacts today and enjoy
+          our application
+        </Description>
+      </DeskContent>
+
+      <LoginLink to="/login">
+        <GetStart>Get start</GetStart>
+      </LoginLink>
     </DivBox>
   );
 };

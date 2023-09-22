@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { nanoid } from 'nanoid';
-import css from './ContactForm.module.css';
 import { addContact } from 'redux/contacts/operations';
+import { DivWrapper, FormStyles, Inputs, Submit } from './ContactForm.styled';
+import { DivContainer } from 'Pages/SignIn/SignIn.styled';
+import Filter from 'components/Filter/Filter';
 
 function ContactForm() {
   const dispatch = useDispatch();
@@ -47,29 +49,30 @@ function ContactForm() {
   };
 
   return (
-    <form className={css.contactForm} onSubmit={handleSubmit}>
-      <input
-        type="text"
-        name="name"
-        placeholder="Name"
-        value={name}
-        onChange={handleInput}
-        required
-        className={css.inputField}
-      />
-      <input
-        type="tel"
-        name="number"
-        placeholder="Phone Number"
-        value={number}
-        onChange={handleInput}
-        required
-        className={css.inputField}
-      />
-      <button type="submit" className={css.submitButton}>
-        Add Contact
-      </button>
-    </form>
+    <DivContainer>
+      <DivWrapper>
+        <FormStyles onSubmit={handleSubmit}>
+          <Inputs
+            type="text"
+            name="name"
+            placeholder="Name"
+            value={name}
+            onChange={handleInput}
+            required
+          />
+          <Inputs
+            type="tel"
+            name="number"
+            placeholder="Phone Number"
+            value={number}
+            onChange={handleInput}
+            required
+          />
+          <Submit type="submit">Add Contact</Submit>
+        </FormStyles>
+      <Filter />
+      </DivWrapper>
+    </DivContainer>
   );
 }
 

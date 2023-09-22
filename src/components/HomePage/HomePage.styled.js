@@ -1,24 +1,19 @@
 import styled from "@emotion/styled";
 import { NavLink } from "react-router-dom";
-import myImg from '../../immage/pexels-pixabay-531880.jpg'
+
 export const DivBox = styled.div`
   max-width: 700px;
   text-transform: none;
   text-align: center; 
   margin: auto;
+  margin-bottom: 100px;
    font-weight: bold;
    font-size: large;
    margin-top: 50px;
 
 
- background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
-    ),
-    url(${myImg});
-
 `;
-export const SigninLink = styled(NavLink)` display: inline-block;
+export const LoginLink = styled(NavLink)` display: inline-block;
   margin-top: 20px;
   text-decoration: none;
   font-weight: bold;
@@ -31,3 +26,29 @@ export const SigninLink = styled(NavLink)` display: inline-block;
      text-decoration: underline; 
   }
 `
+export const GetStart = styled.button`
+  
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  &:hover {
+    background-color: #555;
+  
+}
+
+  `
+
+export const Description = styled.p`
+font-size: 16px; 
+  line-height: 1.5; 
+  margin-bottom: 20px
+  `
+export const DeskContent = styled.div`
+margin-bottom: 200px;
+  `

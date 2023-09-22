@@ -7,6 +7,7 @@ import {
   TitleTexts,
   DivContainer,
   Submit,
+  FormWrapper,
 } from './SignIn.styled';
 import { NavLink } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
@@ -46,27 +47,34 @@ export const SignIn = () => {
         Hello, we are happy to meet you in our application😉
       </TitleTexts>
       <FormStyles onSubmit={handleSubmit}>
-        <InputContainer>
-          <Labels htmlFor="name">Имя</Labels>
-          <Inputs type="text" name="name" id="name" onChange={handleInput} />
-        </InputContainer>
-        <InputContainer>
-          <Labels htmlFor="email">Email</Labels>
-          <Inputs type="email" name="email" id="email" onChange={handleInput} />
-        </InputContainer>
-        <InputContainer>
-          <Labels htmlFor="password">Пароль</Labels>
-          <Inputs
-            type="password"
-            name="password"
-            id="password"
-            onChange={handleInput}
-          />
-        </InputContainer>
-        <p>
-          If you have account - try <NavLink to="/login">log in</NavLink>
-        </p>
-        <Submit type="submit">Submit</Submit>
+        <FormWrapper>
+          <InputContainer>
+            <Labels htmlFor="name">Имя</Labels>
+            <Inputs type="text" name="name" id="name" onChange={handleInput} />
+          </InputContainer>
+          <InputContainer>
+            <Labels htmlFor="email">Email</Labels>
+            <Inputs
+              type="email"
+              name="email"
+              id="email"
+              onChange={handleInput}
+            />
+          </InputContainer>
+          <InputContainer>
+            <Labels htmlFor="password">Пароль</Labels>
+            <Inputs
+              type="password"
+              name="password"
+              id="password"
+              onChange={handleInput}
+            />
+          </InputContainer>
+          <p>
+            If you have account - try <NavLink to="/login">log in</NavLink>
+          </p>
+          <Submit type="submit">Submit</Submit>
+        </FormWrapper>
       </FormStyles>
     </DivContainer>
   );

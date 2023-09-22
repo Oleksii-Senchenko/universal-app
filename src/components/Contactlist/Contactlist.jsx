@@ -6,7 +6,7 @@ import { getContacts } from 'redux/contacts/operations';
 
 function Contactlist() {
   const filter = useSelector(state => state.filter);
-  
+
   const dispatch = useDispatch();
   const contacts = useSelector(state => state.contacts.contacts);
   useEffect(() => {

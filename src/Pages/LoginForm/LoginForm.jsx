@@ -5,6 +5,7 @@ import {
   InputContainer,
   Inputs,
   Labels,
+  Submit,
   TitleTexts,
 } from '../SignIn/SignIn.styled';
 import { NavLink } from 'react-router-dom';
@@ -55,7 +56,7 @@ const LoginForm = () => {
         <p>
           If dont have account - try <NavLink to="/signin">Sign In</NavLink>
         </p>
-        <button>Submit</button>
+        <Submit>Submit</Submit>
       </FormStyles>
     </DivContainer>
   );

@@ -1,6 +1,6 @@
-import css from './Filter.module.css';
 import { useDispatch } from 'react-redux';
 import { filterList } from 'redux/contacts/filterSlice';
+import { Forms, Inputs, Labels} from './Filter.styled';
 function Filter() {
   const dispatch = useDispatch();
 
@@ -10,20 +10,19 @@ function Filter() {
   };
 
   return (
-    <form className={css.form}>
-      <label htmlFor="" className={css.label}>
+    <Forms>
+      <Labels htmlFor="">
         find contacts by name
-        <input
+        <Inputs
           onChange={handleСhange}
           type="text"
           name="query"
           pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
           title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
           required
-          className={css.input}
         />
-      </label>
-    </form>
+      </Labels>
+    </Forms>
   );
 }
 

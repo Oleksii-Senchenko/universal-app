@@ -1,4 +1,3 @@
-// import { NavLink } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { HeaderBGC, LogOut, TitleText } from './Header.styled';
 import { logOut } from 'redux/auth/operationsAuth';
@@ -9,7 +8,7 @@ const Header = () => {
 
   return (
     <HeaderBGC>
-      <TitleText>Phonebook</TitleText>
+      <TitleText to="/">Phonebook</TitleText>
       {isLogin && (
         <LogOut
           onClick={() => {
@@ -24,8 +23,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-
